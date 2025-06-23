@@ -1,5 +1,5 @@
 services:
-drowning-web:
+  drowning-web:
     build:
       context: .
     container_name: drowning-web-service
@@ -17,33 +17,33 @@ drowning-web:
     depends_on:
       - mongodb
 
-mongodb:
-    image: mongo:latest
-    container_name: drowning-web-mongodb
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: rootPassword
-      MONGO_INITDB_DATABASE: drowning-database
-    ports:
-      - "27111:27017"
-    volumes:
-      - drowning-web-mongodb:/data/db/mongodb
+  mongodb:
+      image: mongo:latest
+      container_name: drowning-web-mongodb
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: rootPassword
+        MONGO_INITDB_DATABASE: drowning-database
+      ports:
+        - "27111:27017"
+      volumes:
+        - drowning-web-mongodb:/data/db/mongodb
 
-postgresql:
-    image: postgres:15
-    container_name: drowning-web-postgresql
-    restart: always
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: drowning-database
-    ports:
-      - "5112:5432"
-    volumes:
-      - drowning-web-postgresql:/data/db/postgresql
+  postgresql:
+      image: postgres:15
+      container_name: drowning-web-postgresql
+      restart: always
+      environment:
+        POSTGRES_USER: user
+        POSTGRES_PASSWORD: password
+        POSTGRES_DB: drowning-database
+      ports:
+        - "5112:5432"
+      volumes:
+        - drowning-web-postgresql:/data/db/postgresql
 
 volumes:
-drowning-web-mongodb:
-    driver: local
-drowning-web-postgresql:
-    driver: local
+  drowning-web-mongodb:
+      driver: local
+  drowning-web-postgresql:
+      driver: local
