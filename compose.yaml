@@ -43,7 +43,7 @@ postgresql:
       - drowning-web-postgresql:/data/db/postgresql
 
 volumes:
- drowning-web-mongodb:
+drowning-web-mongodb:
     driver: local
- drowning-web-postgresql:
+drowning-web-postgresql:
     driver: local
