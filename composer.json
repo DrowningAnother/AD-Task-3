@@ -1,11 +1,6 @@
 {
     "name": "drowninganother/ad-task-3",
     "type": "project",
-    "autoload": {
-        "psr-4": {
-            "DrowningAnother\\a\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "drowninganother",
