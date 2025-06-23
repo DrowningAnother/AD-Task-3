@@ -1,0 +1,14 @@
+{
+    "name": "drowninganother/ad-task-3",
+    "type": "project",
+    "authors": [
+        {
+            "name": "drowninganothe0r",
+            "email": "punzubzero@gmail.com"
+        }
+    ],
+    "scripts": {
+        "start": "php -S localhost:8000 router.php"
+    },
+    "require": {}
+}
