@@ -1,8 +1,8 @@
 services:
-  web-app-php:
+drowning-web:
     build:
       context: .
-    container_name: web-app-php-service
+    container_name: drowning-web-service
     ports:
       - "8000:8000"
     develop:
@@ -17,33 +17,33 @@ services:
     depends_on:
       - mongodb
 
-  mongodb:
+mongodb:
     image: mongo:latest
-    container_name: web-app-php-mongodb
+    container_name: drowning-web-mongodb
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: rootPassword
-      MONGO_INITDB_DATABASE: mydatabase
+      MONGO_INITDB_DATABASE: drowning-database
     ports:
       - "27111:27017"
     volumes:
-      - web-app-php-mongodb:/data/db/mongodb
+      - drowning-web-mongodb:/data/db/mongodb
 
-  postgresql:
+postgresql:
     image: postgres:15
-    container_name: web-app-php-postgresql
+    container_name: drowning-web-postgresql
     restart: always
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+      POSTGRES_DB: drowning-database
     ports:
       - "5112:5432"
     volumes:
-      - web-app-php-postgresql:/data/db/postgresql
+      - drowning-web-postgresql:/data/db/postgresql
 
 volumes:
-  web-app-php-mongodb:
+ drowning-web-mongodb:
     driver: local
-  web-app-php-postgresql:
+ drowning-web-postgresql:
     driver: local
