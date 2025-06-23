@@ -42,11 +42,11 @@ Change the following:
 
 ### 4. Update the Checker
 
-- [ ] `mongodbChecker.handler.php`
-  - [ ] change the `27017` with your updated port with internal/external port
+- [/] `mongodbChecker.handler.php`
+  - [/] change the `27017` with your updated port with internal/external port
     > $mongo = `new MongoDB\Driver\Manager("mongodb://host.docker.internal:27017");` -> `$mongo = new MongoDB\Driver\Manager("mongodb://host.docker.internal:23567");`
-- [ ] `postgreChecker.handler.php`
-  - [ ] change the `5112` with your updated port with internal/external port
+- [/] `postgreChecker.handler.php`
+  - [/] change the `5112` with your updated port with internal/external port
     > `$port = "5112";` -> `$port = "5555";`
 - [ ] Spin up the project: in terminal use the command: `docker compose up` and in new cmd is `docker compose watch`
 - [ ] Add the checker in any pages and wait for either of the 2:
