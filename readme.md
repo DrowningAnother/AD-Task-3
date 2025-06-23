@@ -1,15 +1,18 @@
-  <h3 align="center">AD Task 3</h3>
-</div>
+<a name="readme-top">
 
+<br/>
+
+<br />
 <div align="center">
-  AD Task 3 Part 1.
+  <a href="https://github.com/DrowningAnother/">
+
+  <h3 align="center">AD-Task-3</h3>
+</div>
+<div align="center">
+AD Task 3 Part 1
 </div>
 
 <br />
-
-![](https://visit-counter.vercel.app/counter.png?page=DrowningAnother/AD-Task-3)
-
----
 
 <br />
 <br />
@@ -66,8 +69,6 @@ Checks if PostGre and MongoDB are connected an working.
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 #### Deployment
-
-<!--TODO Not sure on this, Docker here right? -syr.--->
 
 ## Rules, Practices and Principles
 
