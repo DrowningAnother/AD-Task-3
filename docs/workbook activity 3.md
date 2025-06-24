@@ -48,9 +48,9 @@ Change the following:
 - [/] `postgreChecker.handler.php`
   - [/] change the `5112` with your updated port with internal/external port
     > `$port = "5112";` -> `$port = "5555";`
-- [ ] Spin up the project: in terminal use the command: `docker compose up` and in new cmd is `docker compose watch`
-- [ ] Add the checker in any pages and wait for either of the 2:
-      All working:
+- [/] Spin up the project: in terminal use the command: `docker compose up` and in new cmd is `docker compose watch`
+- [/] Add the checker in any pages and wait for either of the 2:
+  All working:
 
   ```html
   ✅ Connected to MongoDB successfully. ✅ PostgreSQL Connection
