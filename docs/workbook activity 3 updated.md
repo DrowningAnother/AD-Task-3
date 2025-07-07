@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                      Need Debugging:
-                      ```html
-                      ❌ MongoDB connection failed: ...
-                      ❌ Connection Failed: ...
-                      ```
+                          Need Debugging:
+                          ```html
+                          ❌ MongoDB connection failed: ...
+                          ❌ Connection Failed: ...
+                          ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -104,7 +104,7 @@ sample:
 composer require vlucas/phpdotenv
 ```
 
-- [ ] install `vlucas/phpdotenv`
+- [/] install `vlucas/phpdotenv`
 
 ## 6. Modifying `.env`: Update `.env`
 
