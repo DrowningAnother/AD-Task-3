@@ -10,13 +10,14 @@ require_once 'bootstrap.php';
 // 3) envSetter
 require_once BASE_PATH . '/utils/envSetter.util.php';
 
-// ——— Connect to PostgreSQL ———
+
 $host = $typeConfig['pgHost'];
 $port = $typeConfig['pgPort'];
 $username = $typeConfig['pgUser'];
 $password = $typeConfig['pgPass'];
 $dbname = trim($typeConfig['pgDb'], '"');
 
+// ——— Connect to PostgreSQL ———
 $dsn = "pgsql:host={$host};port={$port};dbname={$dbname}";
 $pdo = new PDO($dsn, $username, $password, [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
