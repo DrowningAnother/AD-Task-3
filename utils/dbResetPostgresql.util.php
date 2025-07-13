@@ -11,6 +11,7 @@ require_once 'bootstrap.php';
 require_once BASE_PATH . '/utils/envSetter.util.php';
 
 
+
 $host = $typeConfig['pgHost'];
 $port = $typeConfig['pgPort'];
 $username = $typeConfig['pgUser'];
