@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                                                                                        Need Debugging:
-                                                                                        ```html
-                                                                                        ❌ MongoDB connection failed: ...
-                                                                                        ❌ Connection Failed: ...
-                                                                                        ```
+                                                                                            Need Debugging:
+                                                                                            ```html
+                                                                                            ❌ MongoDB connection failed: ...
+                                                                                            ❌ Connection Failed: ...
+                                                                                            ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -449,8 +449,8 @@ $pdo->exec($sql);
 
 ### 12. Making Functionality with database: postgresql
 
-- [ ] Auth Util
-- [ ] Auth Handler
+- [/] Auth Util
+- [/] Auth Handler
 - [ ] Reconfig Checkers
 - [ ] Static Data
 - [ ] Components
