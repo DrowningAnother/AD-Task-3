@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                          Need Debugging:
-                          ```html
-                          ❌ MongoDB connection failed: ...
-                          ❌ Connection Failed: ...
-                          ```
+                                                    Need Debugging:
+                                                    ```html
+                                                    ❌ MongoDB connection failed: ...
+                                                    ❌ Connection Failed: ...
+                                                    ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -110,13 +110,13 @@ composer require vlucas/phpdotenv
 
 Make sure important informations are hidden and tucked . as in testing of for the checker they should be changed from hard codded to env based
 
-- [ ] remove the `**/.env` in the `.dockerignore`
-  - [ ] rebuild the docker by `docker compose restart`
-- [ ] Fill all the following data
+- [/] remove the `**/.env` in the `.dockerignore`
+  - [/] rebuild the docker by `docker compose restart`
+- [/] Fill all the following data
   - referencing from `postgreChecker.handler.php` and `mongodbChecker.handler.php`, hide important datas
-- [ ] Change the hard coded of checkers to env based
+- [/] Change the hard coded of checkers to env baseds
   - in the `postgreChecker.handler.php` and `mongodbChecker.handler.php` change hard coded important datas
-- [ ] Create a `envSetter.util.php` code under `utils` distributing all the env
+- [/] Create a `envSetter.util.php` code under `utils` distributing all the env
   > add the following code before distributing it to a variable
 
 ```php
@@ -134,7 +134,7 @@ $typeConfig = [
 ];
 ```
 
-- [ ] add keys which refer to the keys from the `.env`
+- [/] add keys which refer to the keys from the `.env`
   - ex.: `PG_HOST=host.docker.internal` this will be something like this:
 
 ```php
@@ -144,11 +144,11 @@ $typeConfig = [
 ];
 ```
 
-- [ ] Update `mongodbChecker.handler.php` and `postgreChecker.handler.php`
+- [/] Update `mongodbChecker.handler.php` and `postgreChecker.handler.php`
 
-  - [ ] call the setter
-  - [ ] use the variable created to call the values
-        All working:
+  - [/] call the setter
+  - [/] use the variable created to call the values
+    All working:
 
   ```html
   ✅ Connected to MongoDB successfully. ✅ PostgreSQL Connection
