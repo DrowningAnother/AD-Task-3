@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                                                    Need Debugging:
-                                                    ```html
-                                                    ❌ MongoDB connection failed: ...
-                                                    ❌ Connection Failed: ...
-                                                    ```
+                                                                Need Debugging:
+                                                                ```html
+                                                                ❌ MongoDB connection failed: ...
+                                                                ❌ Connection Failed: ...
+                                                                ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -166,21 +166,21 @@ Using `Database` a tool at the tool tab manage and view your database
 
 **Postgresql**
 
-- [ ] Make Sure the Database is working. Go to Docker Desktop and make sure the `image` of `postgre` is green.
-- [ ] In `Database` click `Create Connection`
-- [ ] Select `PostgreSQL`
-- [ ] Setup connection: Port, Username, Password and Database
+- [/] Make Sure the Database is working. Go to Docker Desktop and make sure the `image` of `postgre` is green.
+- [/] In `Database` click `Create Connection`
+- [/] Select `PostgreSQL`
+- [/] Setup connection: Port, Username, Password and Database
   > can be view the data in `compose.yaml`
-- [ ] Click Connect and should show: `Connection Success!` then `Save`
+- [/] Click Connect and should show: `Connection Success!` then `Save`
 
 **Mongodb**
 
-- [ ] Make Sure the Database is working. Go to Docker Desktop and make sure the `image` of `mongodb` is green.
-- [ ] In `Database` click `Create Connection`
-- [ ] Select `MongoDB`
-- [ ] Setup connection: Port
+- [/] Make Sure the Database is working. Go to Docker Desktop and make sure the `image` of `mongodb` is green.
+- [/] In `Database` click `Create Connection`
+- [/] Select `MongoDB`
+- [/] Setup connection: Port
   > can be view the data in `compose.yaml`
-- [ ] Click Connect and should show: `Connection Success!` then `Save`
+- [/] Click Connect and should show: `Connection Success!` then `Save`
 
 ## 8. Design Database: Creating Database formula preparation for automation
 
@@ -188,10 +188,10 @@ Using the GUI of database you need to formulate your data structure on how you w
 in this demo we need to have a design for our users
 Task: Users can be divided into group, they can login, basic information and role.
 
-- [ ] Design a structure
+- [/] Design a structure
 - [ ] Create Base Pattern using the tool by simple selecting the database from `Database`
 
-  - [ ] Select your <database name> ex.: `mydatabase`
+  - [/] Select your <database name> ex.: `mydatabase`
   - [ ] Select `Tables` and look for the `+` sign then click it
   - [ ] Create Sample code then copy
 
@@ -207,17 +207,17 @@ Task: Users can be divided into group, they can login, basic information and rol
   );
   ```
 
-  - [ ] Goto your `Explorer`
-  - [ ] Create new file for that specific model ex.: `users.model.sql`
-  - [ ] Add conditional command on your SQL code
-    - [ ] between `CREATE TABLE` and `<table name>` add the following code `IF NOT EXISTS`
+  - [/] Goto your `Explorer`
+  - [/] Create new file for that specific model ex.: `users.model.sql`
+  - [/] Add conditional command on your SQL code
+    - [/] between `CREATE TABLE` and `<table name>` add the following code `IF NOT EXISTS`
 
 Task:
 Create more tables for the following
 
-- [ ] Projects
-- [ ] Project ↔ User assignments (project_user)
-- [ ] Tasks
+- [/] Projects
+- [/] Project ↔ User assignments (project_user)
+- [/] Tasks
 
 Just Copy the following for the `project_users.model.sql`
 
@@ -229,7 +229,7 @@ CREATE TABLE IF NOT EXISTS project_users (
 );
 ```
 
-- [ ] for all id copy this: `id uuid NOT NULL PRIMARY KEY DEFAULT gen_random_uuid(),`
+- [/] for all id copy this: `id uuid NOT NULL PRIMARY KEY DEFAULT gen_random_uuid(),`
 
 ## 9. Automation: Creating Resetter
 
@@ -249,9 +249,9 @@ In this step we will design an automation that resets the database when needed a
   - Apply SQL Code
 - Output: Create the Table/s Ready for Use
 
-- [ ] Creating a new util code `dbResetPostgresql.util.php`
+- [/] Creating a new util code `dbResetPostgresql.util.php`
 
-- [ ] Setting up requirements
+- [/] Setting up requirements
   > Just copy this
 
 ```php
@@ -267,7 +267,7 @@ require_once 'bootstrap.php';
 require_once UTILS_PATH . '/envSetter.util.php';
 ```
 
-- [ ] Adding the database host and connecting
+- [/] Adding the database host and connecting
 
 ```php
 $host = $databases['pgHost'];
@@ -283,7 +283,7 @@ $pdo = new PDO($dsn, $username, $password, [
 ]);
 ```
 
-- [ ] Using specific commands to use to automatically generate the database tables
+- [/] Using specific commands to use to automatically generate the database tables
 
 ```php
 // Just indicator it was working
@@ -304,7 +304,7 @@ $pdo->exec($sql);
 
 > repeat this code times the number of tables
 
-- [ ] Make sure it clean the tables
+- [/] Make sure it clean the tables
 
 ```php
 echo "Truncating tables…\n";
@@ -313,18 +313,18 @@ foreach (['users'] as $table) {
 }
 ```
 
-- [ ] Add the command in the `composer.json`
+- [/] Add the command in the `composer.json`
 
   - below `scripts` add a new library key set
   - `"postgresql:reset": "php utils/dbResetPostgresql.util.php"`
 
-- [ ] Test it if working
+- [/] Test it if working
 
-  - in terminal use command `composer postgresql:reset`
+  - in terminal use command `composer postgresql:reset`-
     Partial Complete: ✅ PostgreSQL reset complete!
     Issue Arise from SQL Code: ❌ Could not read database/modelName.model.sql
 
-- [ ] visit GUI extension for database for checking and if each table exist congrats it works!!! 🎉
+- [/] visit GUI extension for database for checking and if each table exist congrats it works!!! 🎉
 
 ## 10. Adding Seeder: Creating Automation for viewing Data
 
