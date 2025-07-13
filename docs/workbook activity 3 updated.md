@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                                                                                                                        Need Debugging:
-                                                                                                                        ```html
-                                                                                                                        ❌ MongoDB connection failed: ...
-                                                                                                                        ❌ Connection Failed: ...
-                                                                                                                        ```
+                                                                                                                          Need Debugging:
+                                                                                                                          ```html
+                                                                                                                          ❌ MongoDB connection failed: ...
+                                                                                                                          ❌ Connection Failed: ...
+                                                                                                                          ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -189,11 +189,11 @@ in this demo we need to have a design for our users
 Task: Users can be divided into group, they can login, basic information and role.
 
 - [/] Design a structure
-- [ ] Create Base Pattern using the tool by simple selecting the database from `Database`
+- [/] Create Base Pattern using the tool by simple selecting the database from `Database`
 
   - [/] Select your <database name> ex.: `mydatabase`
-  - [ ] Select `Tables` and look for the `+` sign then click it
-  - [ ] Create Sample code then copy
+  - [/] Select `Tables` and look for the `+` sign then click it
+  - [/] Create Sample code then copy
 
   ```sql
   CREATE TABLE IF NOT EXISTS public."users" (
@@ -455,6 +455,6 @@ $pdo->exec($sql);
 - [/] Static Data
 - [/] Components
 - [/] Layout
-- [ ] Login and logout
-- [ ] Index
-- [ ] Custom Error
+- [/] Login and logout
+- [/] Index
+- [/] Custom Error
