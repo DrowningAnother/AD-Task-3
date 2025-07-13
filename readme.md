@@ -70,6 +70,8 @@ Checks if PostGre and MongoDB are connected an working.
 
 #### Deployment
 
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
 ## Rules, Practices and Principles
 
 <!-- Do not Change this -->
