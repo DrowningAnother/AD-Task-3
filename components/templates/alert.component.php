@@ -2,7 +2,7 @@
 // Alert Component
 // Usage: include this file and call renderAlert($message, $type)
 
-function renderAlert($message, $type = 'info')
+function renderAlert($message, $type = 'info', $allowHtml = false)
 {
     $validTypes = ['success', 'error', 'warning', 'info'];
     $type = in_array($type, $validTypes) ? $type : 'info';
@@ -19,7 +19,7 @@ function renderAlert($message, $type = 'info')
             <span class="alert-icon">ℹ️</span>
         <?php endif; ?>
 
-        <span class="alert-message"><?= htmlspecialchars($message) ?></span>
+        <span class="alert-message"><?= $allowHtml ? $message : htmlspecialchars($message) ?></span>
     </div>
     <?php
 }
@@ -37,5 +37,10 @@ function renderErrorAlert($message)
 function renderWarningAlert($message)
 {
     renderAlert($message, 'warning');
+}
+
+function renderWarningAlertWithHtml($message)
+{
+    renderAlert($message, 'warning', true);
 }
 ?>
