@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                                                                            Need Debugging:
-                                                                            ```html
-                                                                            ❌ MongoDB connection failed: ...
-                                                                            ❌ Connection Failed: ...
-                                                                            ```
+                                                                                Need Debugging:
+                                                                                ```html
+                                                                                ❌ MongoDB connection failed: ...
+                                                                                ❌ Connection Failed: ...
+                                                                                ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -331,7 +331,7 @@ foreach (['users'] as $table) {
 Seeding is terminology used refering to inputing data in database upon creation, making sure it is connected and can view data
 
 - [/] duplicate the `dbResetPostgresql.util.php` and rename it `dbSeederPostgresql.util.php`
-- [ ] add the following logic for
+- [/] add the following logic for
 - Input: Database Code
 - Process:
   - Check Database Connection
@@ -340,7 +340,7 @@ Seeding is terminology used refering to inputing data in database upon creation,
   - Add Seed Data(Dummy Data)
 - Output: Create the Table/s Ready for Use and can view data
 
-- [ ] before logic prepare the data a head
+- [/] before logic prepare the data a head
   - [/] create in `staticData/dummies` a file for the specific model
   - [/] (in this demo we will use the `users model` with `users dummies`) create file named `users.staticData.php`
   - [/] add simple dummy data using array of key arrays
@@ -353,7 +353,7 @@ return [
 ]
 ```
 
-    - [ ] call the dummy data to the seeder code
+    - [/] call the dummy data to the seeder code
 
 ```php
 // after settings requirements
@@ -364,7 +364,7 @@ $users = require_once DUMMIES_PATH . '/users.staticData.php';
 // connect to postgresql
 ```
 
-    - [ ] add seeding logic
+    - [/] add seeding logic
 
 ```php
 // simple indicator command seeding started
@@ -388,14 +388,14 @@ foreach ($users as $u) {
 }
 ```
 
-- [ ] Add the command in the `composer.json`
+- [/] Add the command in the `composer.json`
 
   - below `scripts` add a new library key set
   - `"postgresql:seed": "php utils/dbSeederPostgresql.util.php"`
     Partial Complete: ✅ PostgreSQL seeding complete!
     Issue Arise from SQL Code: ❌ Could not read database/modelName.model.sql
 
-- [ ] visit GUI extension for database for checking and if each contents exist in the tables congrats it works!!! 🎉
+- [/] visit GUI extension for database for checking and if each contents exist in the tables congrats it works!!! 🎉
 
 ## 11. Adding Migration: Creating Automation for Migrating New Table Data
 
