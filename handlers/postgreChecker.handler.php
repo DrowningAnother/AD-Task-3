@@ -1,10 +1,12 @@
 <?php
 
-$host = "host.docker.internal";
-$port = "5112";
-$username = "user";
-$password = "password";
-$dbname = "drowning-database";
+require_once dirname(__DIR__) . '/utils/envSetter.util.php';
+
+$host = $typeConfig['pgHost'];
+$port = $typeConfig['pgPort'];
+$username = $typeConfig['pgUser'];
+$password = $typeConfig['pgPass'];
+$dbname = trim($typeConfig['pgDb'], '"');
 
 $conn_string = "host=$host port=$port dbname=$dbname user=$username password=$password";
 

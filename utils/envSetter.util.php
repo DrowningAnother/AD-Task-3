@@ -8,5 +8,11 @@ $dotenv->load();
 
 // Distribute the data using array key
 $typeConfig = [
-    'key' => $_ENV['ENV_NAME'],
+    'pgHost' => $_ENV['PG_HOST'],
+    'pgPort' => $_ENV['PG_PORT'],
+    'pgDb' => $_ENV['PG_DB'],
+    'pgUser' => $_ENV['PG_USER'],
+    'pgPass' => $_ENV['PG_PASS'],
+    'mongoUri' => $_ENV['MONGO_URI'],
+    'mongoDb' => $_ENV['MONGO_DB'],
 ];
