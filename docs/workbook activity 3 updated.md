@@ -82,11 +82,11 @@ Change the following:
 ✅ PostgreSQL Connection
 `
 
-                                                                Need Debugging:
-                                                                ```html
-                                                                ❌ MongoDB connection failed: ...
-                                                                ❌ Connection Failed: ...
-                                                                ```
+                                                                            Need Debugging:
+                                                                            ```html
+                                                                            ❌ MongoDB connection failed: ...
+                                                                            ❌ Connection Failed: ...
+                                                                            ```
 
   > restart `docker compose up` and `docker compose watch` if you modify the docker after you spin up
 
@@ -330,7 +330,7 @@ foreach (['users'] as $table) {
 
 Seeding is terminology used refering to inputing data in database upon creation, making sure it is connected and can view data
 
-- [ ] duplicate the `dbResetPostgresql.util.php` and rename it `dbSeederPostgresql.util.php`
+- [/] duplicate the `dbResetPostgresql.util.php` and rename it `dbSeederPostgresql.util.php`
 - [ ] add the following logic for
 - Input: Database Code
 - Process:
@@ -341,9 +341,9 @@ Seeding is terminology used refering to inputing data in database upon creation,
 - Output: Create the Table/s Ready for Use and can view data
 
 - [ ] before logic prepare the data a head
-  - [ ] create in `staticData/dummies` a file for the specific model
-  - [ ] (in this demo we will use the `users model` with `users dummies`) create file named `users.staticData.php`
-  - [ ] add simple dummy data using array of key arrays
+  - [/] create in `staticData/dummies` a file for the specific model
+  - [/] (in this demo we will use the `users model` with `users dummies`) create file named `users.staticData.php`
+  - [/] add simple dummy data using array of key arrays
 
 ```php
 <?php
