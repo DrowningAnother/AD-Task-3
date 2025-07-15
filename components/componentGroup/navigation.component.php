@@ -14,13 +14,13 @@ function renderNavigation($currentUser = null)
             <a href="/">Home</a>
 
             <?php if ($currentUser): ?>
-                <a href="/dashboard.php">Dashboard</a>
+                <a href="/dashboard">Dashboard</a>
                 <span class="nav-user">
                     Welcome, <?= htmlspecialchars($currentUser['first_name']) ?>
                 </span>
-                <a href="/logout.php">Logout</a>
+                <a href="/logout">Logout</a>
             <?php else: ?>
-                <a href="/login.php">Login</a>
+                <a href="/login">Login</a>
             <?php endif; ?>
         </div>
     </nav>

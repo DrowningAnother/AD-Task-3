@@ -19,7 +19,7 @@ $content = captureContent(function () use ($currentUser) {
     if ($currentUser) {
         renderSuccessAlert("Welcome back, {$currentUser['first_name']}! You are logged in.");
     } else {
-        renderWarningAlertWithHtml("You are not logged in. <a href='/login.php'>Login here</a> to access the dashboard.");
+        renderWarningAlertWithHtml("You are not logged in. <a href='/login'>Login here</a> to access the dashboard.");
     }
 
     echo "<h2>Database Connection Status</h2>";
@@ -37,10 +37,10 @@ $content = captureContent(function () use ($currentUser) {
     echo "<h3>Quick Links:</h3>";
     echo "<ul>";
     if ($currentUser) {
-        echo "<li><a href='/dashboard.php'>Go to Dashboard</a></li>";
-        echo "<li><a href='/logout.php'>Logout</a></li>";
+        echo "<li><a href='/dashboard'>Go to Dashboard</a></li>";
+        echo "<li><a href='/logout'>Logout</a></li>";
     } else {
-        echo "<li><a href='/login.php'>Login</a></li>";
+        echo "<li><a href='/login'>Login</a></li>";
     }
     echo "</ul>";
 });

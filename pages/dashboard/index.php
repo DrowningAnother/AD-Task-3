@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/../../bootstrap.php';
 require_once UTILS_PATH . '/auth.util.php';
 require_once BASE_PATH . '/layouts/main.layout.php';
 require_once BASE_PATH . '/components/componentGroup/userProfile.component.php';
@@ -19,7 +19,7 @@ $currentUser = getCurrentUser();
 if (!$currentUser) {
     // User not found, logout
     logoutUser();
-    header('Location: /login.php');
+    header('Location: /pages/auth/login.php');
     exit;
 }
 
@@ -48,7 +48,7 @@ $content = captureContent(function () use ($currentUser) {
     echo '<h3>Quick Actions:</h3>';
     echo '<ul>';
     echo '<li><a href="/">Go to Homepage</a></li>';
-    echo '<li><a href="/logout.php">Logout</a></li>';
+    echo '<li><a href="/pages/auth/logout.php">Logout</a></li>';
     echo '</ul>';
     echo '</div>';
     echo '</div>';

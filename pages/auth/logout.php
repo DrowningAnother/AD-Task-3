@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/../../bootstrap.php';
 require_once UTILS_PATH . '/auth.util.php';
 require_once BASE_PATH . '/layouts/main.layout.php';
 require_once BASE_PATH . '/components/templates/alert.component.php';
@@ -28,7 +28,7 @@ $content = captureContent(function () use ($success_message) {
     echo '<h2>Logged Out</h2>';
     echo '<p>You have been successfully logged out of your account.</p>';
     echo '<div class="logout-actions">';
-    echo '<a href="/login.php" class="btn btn-primary">Login Again</a>';
+    echo '<a href="/pages/auth/login.php" class="btn btn-primary">Login Again</a>';
     echo '<a href="/" class="btn btn-secondary">Go to Homepage</a>';
     echo '</div>';
     echo '</div>';
@@ -39,5 +39,5 @@ $content = captureContent(function () use ($success_message) {
 renderLayout('Logout - AD-Task-3', $content);
 
 // Redirect to login after 3 seconds
-header('refresh:3;url=/login.php');
+header('refresh:3;url=/pages/auth/login.php');
 ?>
