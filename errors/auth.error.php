@@ -20,7 +20,6 @@ $content = captureContent(function () use ($currentUser) {
     renderErrorAlert("Authentication required to access this page.");
 
     echo "<h2>401 - Authentication Required</h2>";
-
     if ($currentUser) {
         echo "<p>You are logged in as <strong>{$currentUser['first_name']} {$currentUser['last_name']}</strong>, but you don't have permission to access this resource.</p>";
         echo "<p>If you believe this is an error, please contact the administrator.</p>";
@@ -33,10 +32,10 @@ $content = captureContent(function () use ($currentUser) {
     echo "<ul>";
     echo "<li><a href='/'>Go to Home Page</a></li>";
     if ($currentUser) {
-        echo "<li><a href='/dashboard.php'>Go to Dashboard</a></li>";
-        echo "<li><a href='/logout.php'>Logout and try different account</a></li>";
+        echo "<li><a href='/dashboard'>Go to Dashboard</a></li>";
+        echo "<li><a href='/logout'>Logout and try different account</a></li>";
     } else {
-        echo "<li><strong><a href='/login.php'>Login Now</a></strong></li>";
+        echo "<li><strong><a href='/login'>Login Now</a></strong></li>";
     }
     echo "</ul>";
 

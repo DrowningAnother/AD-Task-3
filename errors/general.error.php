@@ -31,7 +31,7 @@ $content = captureContent(function () use ($currentUser, $errorCode, $errorMessa
     if ($errorCode == '403') {
         echo "<p><strong>Access Denied:</strong> You don't have permission to access this resource.</p>";
         if (!$currentUser) {
-            echo "<p>You may need to <a href='/login.php'>login</a> to access this page.</p>";
+            echo "<p>You may need to <a href='/login'>login</a> to access this page.</p>";
         }
     } elseif ($errorCode == '401') {
         echo "<p><strong>Authentication Required:</strong> Please login to access this resource.</p>";
@@ -43,10 +43,10 @@ $content = captureContent(function () use ($currentUser, $errorCode, $errorMessa
     echo "<ul>";
     echo "<li><a href='/'>Go to Home Page</a></li>";
     if ($currentUser) {
-        echo "<li><a href='/dashboard.php'>Go to Dashboard</a></li>";
-        echo "<li><a href='/logout.php'>Logout</a></li>";
+        echo "<li><a href='/dashboard'>Go to Dashboard</a></li>";
+        echo "<li><a href='/logout'>Logout</a></li>";
     } else {
-        echo "<li><a href='/login.php'>Login</a></li>";
+        echo "<li><a href='/login'>Login</a></li>";
     }
     echo "</ul>";
 

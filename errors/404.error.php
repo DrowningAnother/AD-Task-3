@@ -26,10 +26,10 @@ $content = captureContent(function () use ($currentUser) {
     echo "<ul>";
     echo "<li><a href='/'>Go to Home Page</a></li>";
     if ($currentUser) {
-        echo "<li><a href='/dashboard.php'>Go to Dashboard</a></li>";
-        echo "<li><a href='/logout.php'>Logout</a></li>";
+        echo "<li><a href='/dashboard'>Go to Dashboard</a></li>";
+        echo "<li><a href='/logout'>Logout</a></li>";
     } else {
-        echo "<li><a href='/login.php'>Login</a></li>";
+        echo "<li><a href='/login'>Login</a></li>";
     }
     echo "</ul>";
 
